@@ -10,7 +10,8 @@ export const getPortfolio = async (req,res) =>{
     const profitLoss = calculateProfitLoss(transactions);
     const assetAllocation = calculateAssetAllocation(transactions);
 
-    res.json({
+    res.status(200).json({
+      success:true,
       portfolioValue,
       profitLoss,
       assetAllocation

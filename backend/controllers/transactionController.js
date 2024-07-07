@@ -14,7 +14,7 @@ export const createTransaction = async (req,res) =>{
     });
 
     await newTransaction.save();
-    res.json(newTransaction);
+    res.status(200).json({succss:true,newTransaction});
   } catch (error) {
     res.status(500).send('Server Error');
   }
